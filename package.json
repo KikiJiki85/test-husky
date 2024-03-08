@@ -11,14 +11,8 @@
     "ci:format": "prettier --check ./src",
     "prepare": "husky"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run ci:format",
-      "pre-push": "npm run lint && npx validate-branch-name"
-    }
-  },
   "validate-branch-name": {
-    "pattern": "^(master|main|develop){1}$|^(feature|fix|hotfix|release)\\/.+$",
+    "pattern": "^(rss-puzzle|master)$|^(init|feat|fix|refactor|docs)\\/RSS-PZ-[0-9]{2}_[a-zA-Z]+$",
     "errorMsg": "Working branch name is not correct, please fix it"
   },
   "repository": {
